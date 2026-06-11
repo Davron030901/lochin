@@ -1,0 +1,104 @@
+ML PROBLEM FRAMING TEMPLATE
+=====================================
+
+Group Name: Pascal
+Scenario: Uzum Marketplace Product Recommendations
+Date: 18.04.2026
+
+1. BUSINESS OBJECTIVE
+What does the company actually want to achieve?
+
+Uzum wants to increase sales by showing each customer products they are likely to buy.
+
+2. TARGET VARIABLE
+What exactly are we predicting?
+
+Which product the customer wants to buy
+
+
+3. ML TYPE
+Supervised (Classification/Regression), Unsupervised (Clustering), or Reinforcement Learning?
+
+Supervised - Classification
+
+4. FEATURES (List at least 10)
+
+1. most viewd products
+2. saved products
+3. review, feedback
+4. last purchase of goods
+5. product price
+6. user gender and age
+7. season
+8. time of day
+9. search keywords
+10. location
+
+5. DATA AVAILABILITY
+Where does this data come from in Uzbekistan? What's hard to collect?
+1.Data comes from Uzum app logs (clicks, views, purchases), user profiles, search history, and product database.
+2.Hard to collect: accurate user demographics (age, gender), complete feedback (not everyone leaves reviews, ratings), 
+and external factors like seasonality and trends. Paying in cash makes it difficult to know what the user is buying.
+
+
+6. EVALUATION METRIC
+How will you measure success? (Accuracy, Precision, Recall, F1, AUC, etc.)
+
+We chose Precision because in our problem personalized relevance is critical. 
+The user sees a limited number of recommended products, and each should closely match their interests. 
+Precision is better here because it focuses on the quality of recommendations (how accurate they are), rather than just the total number of relevant items found.
+
+7. CLASS IMBALANCE
+Is the target balanced or imbalanced? What's the distribution?
+
+The distribution is 95% not purchased and 5% purchased.
+The target is imbalanced: most cases are “not purchased” and only a small percentage are “purchased” (e.g., 95% vs 5%)
+
+8. ETHICS & FAIRNESS
+Who benefits? Who could be harmed? What needs human oversight?
+
+Who benefits?
+Uzum company — due to increased sales and revenue
+Users — they receive personalized and convenient recommendations
+Sellers — their products are more likely to be discovered by interested customers
+
+Who could be harmed?
+Users — if recommendations are too aggressive or lead to unnecessary spending
+New or small sellers — their products may be shown less often
+Users with inaccurate data — may receive irrelevant recommendations
+
+What needs human oversight?
+Checking recommendation quality (to ensure they are relevant and not harmful)
+Monitoring bias (e.g., ensuring new sellers are not ignored)
+Handling user complaints and adjusting the model
+Controlling the use of personal data (privacy protection)
+
+
+9. FAILURE MODES
+What could go wrong? What are the consequences?
+
+What could go wrong?
+The model may recommend expensive products to low-income users
+Users may receive irrelevant or random recommendations
+The system may ignore new products or small sellers
+There may be errors in data (incorrect user preferences)
+Users may see identical or very similar products instead of variety
+
+What are the consequences?
+Users stop trusting recommendations and use the app less
+Users may spend money on unnecessary products
+Small sellers lose sales
+Overall system performance decreases
+User experience becomes boring due to lack of diversity
+
+10. RESEARCH SOURCES
+Link 1: AI
+Link 2: https://uzum.com/en/
+Link 3: https://techcrunch.com/2024/03/25/uzbekistan-unicorn-uzum-series-a-funding/?utm_source=chatgpt.com
+
+11. MEMBERS
+1. ILyos Oralov
+2. Feruza Zokirova
+3. Zilola Karimberganova
+4. Munavvar Abdulhayeva
+5. Akhmedova Muslima
